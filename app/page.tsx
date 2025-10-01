@@ -13,7 +13,7 @@ export default function Home() {
             Report civic issues like potholes, broken streetlights, or garbage spills directly to your local authorities.
           </p>
           <a
-            href="/report"
+            href="./report"
             className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 rounded-md text-lg hover:bg-blue-700 transition"
           >
             Report an Issue

@@ -2,101 +2,59 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+    <div className="min-h-screen bg-gray-50 text-gray-800 flex flex-col">
+      {/* Hero Section */}
+      <section className="flex bg-gray-100 rounded-4xl">
+        <div className="w-auto mx-auto px-4 py-16 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-transparent mb-6 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text">
+            Empowering Citizens. Improving Cities.
+          </h2>
+          <p className="text-lg text-gray-700 mb-8">
+            Report civic issues like potholes, broken streetlights, or garbage spills directly to your local authorities.
+          </p>
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/report"
+            className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 rounded-md text-lg hover:bg-blue-700 transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            Report an Issue
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="bg-white py-16">
+        <div className="max-w-5xl mx-auto px-4 text-center">
+          <h3 className="text-3xl font-semibold mb-4 text-gray-800">How It Works</h3>
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            Our platform bridges the gap between citizens and city officials by providing a simple interface to report and track civic issues.
+            Each report is geo-tagged and sent to the relevant department for timely resolution.
+          </p>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section id="stats" className="bg-gray-100 py-16">
+        <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+          <div>
+            <h4 className="text-4xl font-bold text-blue-600">1,200+</h4>
+            <p className="text-gray-600 mt-2">Issues Reported</p>
+          </div>
+          <div>
+            <h4 className="text-4xl font-bold text-green-600">950+</h4>
+            <p className="text-gray-600 mt-2">Issues Resolved</p>
+          </div>
+          <div>
+            <h4 className="text-4xl font-bold text-yellow-600">300+</h4>
+            <p className="text-gray-600 mt-2">Active Users</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-white shadow mt-auto">
+        <div className="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
+          &copy; {new Date().getFullYear()} Smart Civic Issue Reporting. All rights reserved.
+        </div>
       </footer>
     </div>
   );

@@ -4,25 +4,29 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800 flex flex-col">
       {/* Hero Section */}
-      <section className="flex bg-gray-100 rounded-4xl">
-        <div className="w-auto mx-auto px-4 py-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-transparent mb-6 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text">
-            Empowering Citizens. Improving Cities.
-          </h2>
-          <p className="text-lg text-gray-700 mb-8">
-            Report civic issues like potholes, broken streetlights, or garbage spills directly to your local authorities.
-          </p>
-          <a
-            href="./report"
-            className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 rounded-md text-lg hover:bg-blue-700 transition"
-          >
-            Report an Issue
-          </a>
+      <div className="flex justify-around items-center bg-gray-100 rounded-4xl py-6">
+        <section className="flex">
+          <div className="w-auto mx-auto px-4 py-16 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-transparent mb-6 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text">
+              Empowering Citizens. Improving Cities.
+            </h2>
+            <p className="text-lg text-gray-700 mb-8 max-w-5xl">
+              Our goal is to help people by providing a platform where they can report civic problems, without any hesitation because we save time where without it they have to go & meet them personally but we sent this report directly to officials with the location
+            </p>
+            <a
+              href="./report"
+              className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 rounded-md text-lg hover:bg-blue-700 transition"
+            >
+              Report an Issue
+            </a>
+          </div>
+        </section>
+        <div className="h-[500px] w-[500px] bg-yellow-600 max-md:hidden rounded-2xl">
         </div>
-      </section>
+      </div>
 
       {/* About Section */}
-      <section id="about" className="bg-white py-16">
+      <section id="about" className="py-16">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <h3 className="text-3xl font-semibold mb-4 text-gray-800">How It Works</h3>
           <p className="text-gray-600 max-w-3xl mx-auto">
@@ -33,7 +37,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section id="stats" className="bg-gray-100 py-16">
+      <section id="stats" className="py-16">
         <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
           <div>
             <h4 className="text-4xl font-bold text-blue-600">1,200+</h4>
